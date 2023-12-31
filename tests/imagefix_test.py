@@ -1,5 +1,5 @@
 from unittest import TestCase
-from imagefix.command_line import main
+from source.imagefix import main
 
 
 class TestConsole(TestCase):

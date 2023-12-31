@@ -8,14 +8,14 @@ def readme():
 
 setup(
     name='imagefix',
-    version='0.0.1',
+    version='0.0.2',
     description='Image Fixer CLI application.',
     long_description=readme(),
     classifiers=[
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.10',
-        'Topic :: Image :: Image Processing',
+        'Topic :: Image :: Image Processing :: Video Processing',
     ],
     keywords='imagefix',
     url='https://github.com/zeindevs/imagefix',
@@ -24,8 +24,11 @@ setup(
     license='MIT',
     packages=['imagefix'],
     zip_safe=False,
-    scripts=['bin/imagefix'],
+    scripts=['bin/imagefix', 'bin/tsconvert'],
     entry_points={
-        'console_scripts': ['imagefix=imagefix.command_line:main']
+        'console_scripts': [
+            'imagefix=imagefix.imagefix:main',
+            'tsconvert=imagefix.tsconvert:main'
+        ]
     }
 )

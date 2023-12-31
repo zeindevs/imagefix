@@ -6,7 +6,7 @@ from PIL import Image
 def main():
     parser = argparse.ArgumentParser(
         prog='imagefix',
-        description='Image Fixer',
+        description='Image fixer',
         epilog='Thank for using %(prog)s! :)',
         argument_default=argparse.SUPPRESS,
     )
@@ -38,6 +38,7 @@ def main():
             print(f"[{idx+1}/{len(images)}] Fix:", image)
 
         print("\nComplete")
-    else:
-        print("No image found")
-        SystemExit(1)
+        return
+
+    print("No image found")
+    raise SystemExit(1)
