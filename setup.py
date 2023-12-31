@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='imagefix',
-    version='0.0.2',
+    version='0.0.3',
     description='Image Fixer CLI application.',
     long_description=readme(),
     classifiers=[
@@ -24,11 +24,12 @@ setup(
     license='MIT',
     packages=['imagefix'],
     zip_safe=False,
-    scripts=['bin/imagefix', 'bin/tsconvert'],
+    scripts=['bin/imagefix', 'bin/tsconvert', 'bin/optimize-videos'],
     entry_points={
         'console_scripts': [
             'imagefix=imagefix.imagefix:main',
-            'tsconvert=imagefix.tsconvert:main'
+            'tsconvert=imagefix.tsconvert:main',
+            'optimize-videos=imagefix.optimizevideos:main'
         ]
     }
 )
